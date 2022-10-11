@@ -7,18 +7,43 @@
 // Prompt 
 // Array
 // Array + ciclo 
+// if / if else 
 // insertAdjacentHTML 
 
 // Operazioni da eseguire:
 
 // Utiliziamo il comando prompt per chiedere la mail all'utente
 const emailToInsert = prompt(`Inserisci la tua mail!`)
-console.log(emailToInsert);
+// console.log(emailToInsert);
 
 // Successivamente creiamo una lista con le varie mail 
 
+const registeredMails = [
+    `franco87@gmail.com`,
+    `pino21@gmail.com`,
+    `ansaldi10@gmail.com`,
+    `rafaleao@gmail.com`,
+    `roberto97@gmail.com`,
+]
 
 // Attravesro Array + ciclo visioniamo se la mail è presente nella lista 
+
+for (let i = 0; i < registeredMails.length; i++) {
+    const mail = registeredMails[i];
+    // console.log(mail);
+
+    // verifichiamo se la mail corrisponde 
+    if (mail === emailToInsert) {
+        
+        // Stampiamo mail valida 
+        console.log(`mail valida`);
+
+        // altrimeti stamperemo mail mancante 
+    }else{
+        alert(`mail mancante`);
+    }
+}
+
 //Infine stampiamo sul foglio HTML il risultato 
 
 
