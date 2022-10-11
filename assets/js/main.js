@@ -16,6 +16,7 @@
 const emailToInsert = prompt(`Inserisci la tua mail!`)
 // console.log(emailToInsert);
 
+
 // Successivamente creiamo una lista con le varie mail 
 
 const registeredMails = [
@@ -25,39 +26,39 @@ const registeredMails = [
     `rafaleao@gmail.com`,
     `roberto97@gmail.com`,
 ]
+let isValid = false;
 
 // Attravesro Array + ciclo visioniamo se la mail è presente nella lista 
 
 for (let i = 0; i < registeredMails.length; i++) {
     const mail = registeredMails[i];
     // console.log(mail);
-
+    
     // verifichiamo se la mail corrisponde 
     if (mail === emailToInsert){
-        
+        isValid = true
         // Stampiamo mail valida 
-        console.log(`mail valida`);
-
-        // altrimeti stamperemo mail mancante 
-    }else{
-        console.log(`mail mancante`);
     }
+    
 }
+console.log(isValid);
 
 //Infine stampiamo sul foglio HTML il risultato 
+
+const pElement = document.querySelector(`p`)
+
+pElement.innerHTML = isValid;
+
+// selezioniamo con il querySelector
+
 
 
 // Gioco dei dadi
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+
 // Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un array da qualche parte? Se dobbiamo confrontare qualcosa che "cosa" ci serve?
 
 
 
 
-
-// Consigli del giorno:
-// scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
-// javascript non fa nulla da solo, dobbiamo dirgli noi cosa vogliamo fare
-// si ma noi cosa vogliamo fare?
-// torniamo a scrivere in italiano
-// proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
