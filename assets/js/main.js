@@ -33,14 +33,14 @@ for (let i = 0; i < registeredMails.length; i++) {
     // console.log(mail);
 
     // verifichiamo se la mail corrisponde 
-    if (mail === emailToInsert) {
+    if (mail === emailToInsert){
         
         // Stampiamo mail valida 
         console.log(`mail valida`);
 
         // altrimeti stamperemo mail mancante 
     }else{
-        alert(`mail mancante`);
+        console.log(`mail mancante`);
     }
 }
 
