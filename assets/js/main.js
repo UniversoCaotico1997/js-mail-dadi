@@ -26,6 +26,7 @@ const registeredMails = [
     `rafaleao@gmail.com`, 
     `roberto97@gmail.com`, 
 ]
+
 let isValid = false; 
 
 // Attravesro Array + ciclo visioniamo se la mail è presente nella lista 
@@ -62,7 +63,7 @@ pElement.innerHTML = isValid;
 // Gioco dei dadi
 
 //strumenti 
-// Prompt
+// math.random
 // const / let 
 // Array 
 // Creiamo un ciclo con Array 
@@ -71,29 +72,27 @@ pElement.innerHTML = isValid;
 
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
  // creiamo due variabili con i numeri da 1 a 6 
-    // variabile player attraverso prompt
-   
-    const playerNumbers = Number(prompt(`Scrivi un numero da 1 a 6!`));
     
-    // variabile computer 
-    const numbers = [1, 2, 3, 4, 5, 6];
+    const playerNumbers = Math.ceil(Math.random() * 6);
+    
+    const pcNumbers = Math.ceil(Math.random() * 6);
     // console.log(playerNumbers, cpNumbers);
 
-    let isValid = true;
+    let winner;
 
     // Creiamo un ciclo for con Array per verificare il numero più alto 
+    
+    // verifichiamo il numero più alto 
+        if (playerNumbers > pcNumbers) {
+            winner = `player`;
 
-    for (let i = 0; i < numbers.length; i++) {
-        const cpNumbers = numbers[i];
-        // console.log(cpNumbers);
-
-        // verifichiamo il numero più alto 
-        if (cpNumbers < playerNumbers) {
-            isValid = false
+        } else if (pcNumbers > playerNumbers) {
+            winner = `pc`;
+        } else {
+            winner = `both`;
         }
-        
-    }
-    console.log(isValid);
+
+        console.log(`Il vincioter è`, winner);
 
 
     // stampiamo il risultato sul nostro html 
@@ -104,7 +103,7 @@ pElement.innerHTML = isValid;
 
     // stampiamo  con innerHTML 
 
-    pElement.innerHTML = isValid; 
+    pElement.innerHTML = winner; 
 
 
 
