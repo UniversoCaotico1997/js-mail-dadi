@@ -13,45 +13,50 @@
 // Operazioni da eseguire:
 
 // Utiliziamo il comando prompt per chiedere la mail all'utente
-// const emailToInsert = prompt(`Inserisci la tua mail!`) --
+const emailToInsert = prompt(`Inserisci la tua mail!`) 
 // console.log(emailToInsert);
 
 
 // Successivamente creiamo una lista con le varie mail 
 
-// const registeredMails = [ --
-//     `franco87@gmail.com`, --
-//     `pino21@gmail.com`, --
-//     `ansaldi10@gmail.com`, --
-//     `rafaleao@gmail.com`, --
-//     `roberto97@gmail.com`, --
-// ]
-// let isValid = false; --
+const registeredMails = [ 
+    `franco87@gmail.com`, 
+    `pino21@gmail.com`, 
+    `ansaldi10@gmail.com`, 
+    `rafaleao@gmail.com`, 
+    `roberto97@gmail.com`, 
+]
+let isValid = false; 
 
 // Attravesro Array + ciclo visioniamo se la mail è presente nella lista 
 
-// for (let i = 0; i < registeredMails.length; i++) { --
-//     const mail = registeredMails[i]; --
+for (let i = 0; i < registeredMails.length; i++) { 
+    const mail = registeredMails[i]; 
     // console.log(mail);
     
     // verifichiamo se la mail corrisponde 
-    // if (mail === emailToInsert){ --
-    //     isValid = true --
-        // Stampiamo mail valida 
-//     } --
+    if (mail === emailToInsert){ 
+        // mail valida
+        isValid = true;  
+    } 
     
-// } --
-// console.log(isValid); --
+} 
+
+if (isValid) {
+    console.log(`Benvenuto nel sito`);
+}else{
+    console.log(`mail non valida`);
+}
 
 //Infine stampiamo sul foglio HTML il risultato 
 
 // selezioniamo con il querySelector
 
-// const pElement = document.querySelector(`p`) --
+const pElement = document.querySelector(`p`); 
 
 // stampiamo  con innerHTML 
 
-// pElement.innerHTML = isValid; --
+pElement.innerHTML = isValid; 
 
 
 // Gioco dei dadi
@@ -67,6 +72,7 @@
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
  // creiamo due variabili con i numeri da 1 a 6 
     // variabile player attraverso prompt
+   
     const playerNumbers = Number(prompt(`Scrivi un numero da 1 a 6!`));
     
     // variabile computer 
